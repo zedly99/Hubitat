@@ -1,7 +1,7 @@
 /**
  *  Child Ultrasonic Sensor for Distance
  *
- *  https://raw.githubusercontent.com/DanielOgorchock/ST_Anything/master/HubDuino/Drivers/child-ultrasonic-distance.groovy
+ *  https://raw.githubusercontent.com/zedly99/Hubitat/master/child-ultrasonic-distance.groovy
  *
  *  Copyright 2017 Daniel Ogorchock, modifications by SteveZed
  *
@@ -27,8 +27,8 @@
  * 
  */
 metadata {
-	definition (name: "Child Ultrasonic Sensor", namespace: "zedly99", author: "Steve Zed", importUrl: "https://raw.githubusercontent.com/zedly99/Hubitat/child-ultrasonic-distance.groovy") {
-		capability "Sensor"
+	definition (name: "Child Ultrasonic Sensor", namespace: "zedly99", author: "SteveZed", importUrl: "https://raw.githubusercontent.com/zedly99/Hubitat/master/child-ultrasonic-distance.groovy") {
+	capability "Sensor"
         capability "Presence Sensor"
         attribute "distance", "Number"
     }
