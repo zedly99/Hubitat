@@ -1,9 +1,9 @@
 /**
- *  Child Ultrasonic Sensor
+ *  Child Ultrasonic Sensor for Distance
  *
- *  https://raw.githubusercontent.com/DanielOgorchock/ST_Anything/master/HubDuino/Drivers/child-ultrasonic-sensor.groovy
+ *  https://raw.githubusercontent.com/DanielOgorchock/ST_Anything/master/HubDuino/Drivers/child-ultrasonic-distance.groovy
  *
- *  Copyright 2017 Daniel Ogorchock
+ *  Copyright 2017 Daniel Ogorchock, modifications by SteveZed
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  *  in compliance with the License. You may obtain a copy of the License at:
@@ -22,12 +22,12 @@
  *    2018-09-22  Dan Ogorchock  Added preference for debug logging
  *    2019-07-01  Dan Ogorchock  Added importUrl
  *    2020-01-25  Dan Ogorchock  Remove custom lastUpdated attribute & general code cleanup
- *   
+ *    2020-07-01  Steve Zed      Modified to show presence based on distance
  *
  * 
  */
 metadata {
-	definition (name: "Child Ultrasonic Sensor", namespace: "ogiewon", author: "Daniel Ogorchock", importUrl: "https://raw.githubusercontent.com/DanielOgorchock/ST_Anything/master/HubDuino/Drivers/child-ultrasonic-sensor.groovy") {
+	definition (name: "Child Ultrasonic Sensor", namespace: "zedly99", author: "Steve Zed", importUrl: "https://raw.githubusercontent.com/zedly99/Hubitat/child-ultrasonic-distance.groovy") {
 		capability "Sensor"
         capability "Presence Sensor"
         attribute "distance", "Number"
@@ -35,7 +35,7 @@ metadata {
 
 
     preferences {
-        input name: "distance", type: "number", title: "Distance", description: "Maximum distance to register as present (inches)", required: true
+        input name: "distance", type: "number", title: "Distance", description: "Maximum distance to register as present (cm)", required: true
         input name: "logEnable", type: "bool", title: "Enable debug logging", defaultValue: true
     }
 }
